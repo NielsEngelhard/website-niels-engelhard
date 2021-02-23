@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'website-porto';
   showTerminal = true;
+  showMovies = false;
 
   toggleTerminal(): void {
     this.showTerminal = !this.showTerminal;
+  }
+
+  toggleMovies(): void {
+    this.showMovies = !this.showMovies;
   }
 }

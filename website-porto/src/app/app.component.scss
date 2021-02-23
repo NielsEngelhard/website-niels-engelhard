@@ -14,72 +14,201 @@
   );
 }
 
-// footer \\
-$color-dark: #000;
-$color-light: #fff;
-$bg-size-end: 4.2;
-$dur: .3s;
+.playGround {
+  background-image: url("../assets/background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-.navbarFooter {
-  overflow: hidden;
-  background-color: #333;
+/* ==========================================================================
+    Taskbar
+========================================================================== */
+.taskbar {
   position: fixed;
-  left: 0;
   bottom: 0;
+  height: 43px;
   width: 100%;
+  background: #004172;
 }
 
-.navbarFooter a {
-  float: left;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.taskbar .icons-left {
+  height: 43px;
+  display: inline-block;
+}
+
+.taskbar .icons-left #start-menu, .taskbar .icons-left #tabs-windows {
+  height: 43px;
+  width: 100px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url("../assets/checkers.png");
+}
+
+.taskbar .icons-left #cheatcodes {
+  height: 43px;
+  width: 200px;
+}
+
+.taskbar .icons-left #inputfield {
+  height: 43px;
+  width: 200px;
+}
+
+.taskbar .icons-left #movies {
+  height: 43px;
+  width: 49px;
+  background-image: url("../assets/movies.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 21px 21px;
+  background-size: 24px 21px;
+}
+
+.taskbar .icons-left #terminal {
+  height: 43px;
+  width: 49px;
+  background-image: url("../assets/terminal.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px 26px;
+}
+
+.taskbar .icons-left #nielsengelhard {
+  height: 43px;
+  width: 49px;
+  background-image: url("../assets/nielsengelhard.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px 15px;
+  background-size: 23px 15px;
+}
+
+.taskbar .icons-left #tabs-windows:hover {
+  height: 43px;
+  width: 49px;
+  background-image: url("https://image.noelshack.com/fichiers/2018/18/5/1525467821-tabs.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px 15px;
+  background-size: 28px 15px;
+}
+
+.taskbar .icons-left a {
+  display: table-cell;
+  border-bottom: 2px solid transparent;
+}
+
+.taskbar .icons-left a:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.taskbar .icons-left a:not(:first-child) {
+  margin-left: -4px;
+}
+
+.taskbar .icons-left a.border:focus {
+  border-bottom: 2px solid rgba(245, 245, 245, 0.651);
+}
+
+.taskbar .icons-left .px {
+  width: 1px;
+}
+
+.taskbar .icons-left .px a {
+  pointer-events: none;
+}
+
+.taskbar .icons-right {
+  height: 43px;
+  float: right;
+}
+
+.taskbar .icons-right #wifi {
+  height: 43px;
+  width: 49px;
+  background-image: url("https://image.noelshack.com/fichiers/2018/18/4/1525383811-wifinotificationicon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.taskbar .icons-right #sound {
+  height: 43px;
+  width: 49px;
+  background-image: url("https://image.noelshack.com/fichiers/2018/18/4/1525383779-audiotoasticon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 22px;
+}
+
+.taskbar .icons-right #return {
+  width: 4px;
+  border-left: 1px solid grey;
+}
+
+.taskbar .icons-right #notifications, .taskbar .icons-right #up {
+  height: 43px;
+  width: 42px;
+  position: relative;
+}
+
+.taskbar .icons-right #notifications i, .taskbar .icons-right #up i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 17px;
+  color: white;
+}
 
-  outline: none;
-  user-select: none;
-  color: $color-dark;
-  font-family: 'Lato', sans-serif;
-  letter-spacing: 0.04rem;
+.taskbar .icons-right .clear {
+  height: 43px;
+  width: 7px;
+  display: table-cell;
+}
+
+.taskbar .icons-right .disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.taskbar .icons-right .datetime {
+  display: table-cell;
+  width: 70px !important;
   cursor: pointer;
-  border-radius: .4rem;
-  border: .3rem solid $color-dark;
-  background: $color-light;
-  position: static;
-  overflow: hidden;
-  width: 3%;
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform: scale(0);
-    transition: transform $dur ease-in;
-    mix-blend-mode: difference;
-    //Gradient start values are somewhat arbitrary. But this seemed a good fit to avoid overly-blurry circle edge.
-    background: radial-gradient(
-        circle at center,
-        $color-light 24%,
-        $color-dark 25%,
-        $color-dark 100%);
-  }
-
-  box-shadow: 0 3px 0 0 $color-dark;
-  &:active {
-    top: 3px;
-    box-shadow: none;
-  }
+  padding-top: 3px;
 }
 
-.navbarFooter a:hover {
-  background-color: #ddd;
-  color: black;
+.taskbar .icons-right .datetime span {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 11.3px;
+  color: white;
 }
 
-.navbarFooter a.startButton {
-  width: 5%;
-
+.taskbar .icons-right .datetime:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
+
+.taskbar .icons-right a {
+  display: table-cell;
+}
+
+.taskbar .icons-right a:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.taskbar .icons-right a:not(:first-child) {
+  margin-left: -4px;
+}
+
+.taskbar .icons-right .small-icons {
+  width: 24px !important;
+}
+
+

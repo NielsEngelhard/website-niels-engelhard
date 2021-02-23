@@ -4,11 +4,13 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppComponent } from './app.component';
 import { TerminalComponent } from './apps/terminal/terminal.component';
+import { MoviesComponent } from './apps/movies/movies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TerminalComponent
+    TerminalComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,

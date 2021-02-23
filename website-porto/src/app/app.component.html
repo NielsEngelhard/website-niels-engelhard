@@ -1,9 +1,51 @@
-<app-terminal cdkDrag *ngIf="showTerminal"></app-terminal>
+<!-- navbar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="vague">
+<div class="playGround">
+  <app-terminal cdkDrag *ngIf="showTerminal"></app-terminal>
+  <app-movies cdkDrag *ngIf="showMovies"></app-movies>
+  <!-- Taskbar -->
+  <div class="taskbar">
+    <div class="icons">
 
-<!-- footer -->
-<div class="navbarFooter">
-  <a class="startButton">Home</a>
-  <a>News</a>
-  <a>Contact</a>
-  <a (click)="toggleTerminal()">Ter</a>
+      <div class="icons-left">
+        <a id="start-menu"><i class="fab fa-windows"></i></a>
+        <a id="cheatcodes">
+          <input id="inputfield" type="text" placeholder="Search.." name="search">
+        </a>
+        <a id="nielsengelhard"></a>
+        <a class="px"></a>
+        <a id="movies" (click)="toggleMovies()" class="border"></a>
+        <a (click)="toggleTerminal()" id="terminal" class="border"></a>
+      </div>
+
+      <div class="icons-right">
+        <a href="#up" id="up" class="small-icons"><i class="fas fa-chevron-up"></i></a>
+        <a href="#sound-modal" id="sound" class="small-icons"></a>
+        <a href="#wifi-modal" id="wifi" class="small-icons"></a>
+        <div class="datetime">
+                        <span class="hour">
+                            04:20
+                        </span>
+          <span class="date">
+                            12/01/2000
+                        </span>
+        </div>
+        <a href="#notifications" id="notifications"><i class="far fa-bell"></i></a>
+        <a href="#" class="clear disabled"></a>
+        <a href="#" id="return"></a>
+      </div>
+    </div>
+  </div>
 </div>
+</body>
+</html>
+
+
+
